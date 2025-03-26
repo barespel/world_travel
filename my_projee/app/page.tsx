@@ -18,22 +18,22 @@ export default function TravelWebsite() {
   const destinations: Destination[] = [
     {
       id: 1,
-      title: "Buddha Temple, Thailand",
-      image: "/thailand-temple.jpg",
+      title: "Ayasofya, İstanbul",
+      image: "/istanbul.jpg",
       rating: 5,
       link: "/destinations/thailand"
     },
     {
       id: 2,
-      title: "Broken Beach, Bali",
-      image: "/bali-beach.jpg",
+      title: "Sümela Manastırı, Trabzon",
+      image: "/trabzon.jpg",
       rating: 5,
       link: "/destinations/bali"
     },
     {
       id: 3,
-      title: "Kerala",
-      image: "/kerala.jpg",
+      title: "Porsuk, Eskişehir",
+      image: "/eskişehir.jpg",
       rating: 5,
       link: "/destinations/kerala"
     },
@@ -44,13 +44,15 @@ export default function TravelWebsite() {
       {/* Background Image */}
       <div className="fixed inset-0 w-full h-full z-0">
         <Image
-          src="/thailand-temple.jpg"
-          alt="Thailand Temple Background"
+          src="/türkiye.jpg"
+          alt="Background Image"
           fill
-          className="object-cover"
+          sizes="100vw"
+          quality={100}
+          className="object-cover object-center"
           priority
         />
-        <div className="absolute inset-0 bg-blue-900/40 backdrop-blur-[2px]" />
+       
       </div>
 
       {/* Content - z-index ile içeriği arka planın üzerine getiriyoruz */}
@@ -65,7 +67,7 @@ export default function TravelWebsite() {
               height={40}
               className="mr-2"
             />
-            <span className="text-white text-2xl font-bold">Foxico</span>
+            <span className="text-white text-2xl font-bold">Fıratçı Travel</span>
           </div>
           
           <div className="flex items-center space-x-8 text-white">
@@ -74,8 +76,15 @@ export default function TravelWebsite() {
             <a href="#" className="hover:text-blue-200">Blog</a>
             <a href="#" className="hover:text-blue-200">Contact</a>
             <div className="flex items-center">
-              <div className="w-8 h-8 rounded-full bg-white" />
-              <span className="ml-2">Hello, Anney!</span>
+              <div className="relative w-8 h-8 rounded-full overflow-hidden">
+                <Image
+                  src="/fırat.png"
+                  alt="Profil Fotoğrafı"
+                  fill
+                  className="object-cover"
+                />
+              </div>
+              <span className="ml-2">Hello, Barespel!</span>
             </div>
           </div>
         </nav>
@@ -88,7 +97,7 @@ export default function TravelWebsite() {
               animate={{ opacity: 1, y: 0 }}
               className="text-8xl font-bold text-white mb-6"
             >
-              INDONESIA
+              TÜRKİYE
             </motion.h1>
             <motion.p 
               initial={{ opacity: 0 }}
